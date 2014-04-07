@@ -27,6 +27,7 @@
     
     
     //testing core data with hardcoded object inputs
+    //everytime the app is run, another one of set of these objects is persisted
     NSManagedObjectContext *context = [self managedObjectContext];
     //NSManagedObjectContext *context = _managedObjectContext;
     FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
