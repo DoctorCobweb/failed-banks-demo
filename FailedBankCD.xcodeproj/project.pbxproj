@@ -16,8 +16,6 @@
 		65BC965D18F23E8D006063CA /* FBCDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC965C18F23E8D006063CA /* FBCDAppDelegate.m */; };
 		65BC966018F23E8D006063CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BC965E18F23E8D006063CA /* Main.storyboard */; };
 		65BC966318F23E8D006063CA /* FailedBankCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65BC966118F23E8D006063CA /* FailedBankCD.xcdatamodeld */; };
-		65BC966618F23E8D006063CA /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC966518F23E8D006063CA /* FBCDMasterViewController.m */; };
-		65BC966918F23E8D006063CA /* FBCDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC966818F23E8D006063CA /* FBCDDetailViewController.m */; };
 		65BC966B18F23E8E006063CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65BC966A18F23E8E006063CA /* Images.xcassets */; };
 		65BC967218F23E8E006063CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC967118F23E8E006063CA /* XCTest.framework */; };
 		65BC967318F23E8E006063CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC964A18F23E8D006063CA /* Foundation.framework */; };
@@ -25,6 +23,9 @@
 		65BC967518F23E8E006063CA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BC965018F23E8D006063CA /* CoreData.framework */; };
 		65BC967D18F23E8E006063CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65BC967B18F23E8E006063CA /* InfoPlist.strings */; };
 		65BC967F18F23E8E006063CA /* FailedBankCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC967E18F23E8E006063CA /* FailedBankCDTests.m */; };
+		65BC968A18F23F1F006063CA /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC968918F23F1F006063CA /* FBCDMasterViewController.m */; };
+		65BC969018F24C49006063CA /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC968F18F24C49006063CA /* FailedBankDetails.m */; };
+		65BC969618F24DA5006063CA /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC969518F24DA5006063CA /* FailedBankInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,16 +52,18 @@
 		65BC965C18F23E8D006063CA /* FBCDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDAppDelegate.m; sourceTree = "<group>"; };
 		65BC965F18F23E8D006063CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65BC966218F23E8D006063CA /* FailedBankCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FailedBankCD.xcdatamodel; sourceTree = "<group>"; };
-		65BC966418F23E8D006063CA /* FBCDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
-		65BC966518F23E8D006063CA /* FBCDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
-		65BC966718F23E8D006063CA /* FBCDDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBCDDetailViewController.h; sourceTree = "<group>"; };
-		65BC966818F23E8D006063CA /* FBCDDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBCDDetailViewController.m; sourceTree = "<group>"; };
 		65BC966A18F23E8E006063CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		65BC967018F23E8E006063CA /* FailedBankCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FailedBankCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BC967118F23E8E006063CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		65BC967A18F23E8E006063CA /* FailedBankCDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FailedBankCDTests-Info.plist"; sourceTree = "<group>"; };
 		65BC967C18F23E8E006063CA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65BC967E18F23E8E006063CA /* FailedBankCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FailedBankCDTests.m; sourceTree = "<group>"; };
+		65BC968818F23F1F006063CA /* FBCDMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBCDMasterViewController.h; sourceTree = "<group>"; };
+		65BC968918F23F1F006063CA /* FBCDMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBCDMasterViewController.m; sourceTree = "<group>"; };
+		65BC968E18F24C49006063CA /* FailedBankDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDetails.h; sourceTree = "<group>"; };
+		65BC968F18F24C49006063CA /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
+		65BC969418F24DA5006063CA /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		65BC969518F24DA5006063CA /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,13 +129,15 @@
 				65BC965B18F23E8D006063CA /* FBCDAppDelegate.h */,
 				65BC965C18F23E8D006063CA /* FBCDAppDelegate.m */,
 				65BC965E18F23E8D006063CA /* Main.storyboard */,
-				65BC966418F23E8D006063CA /* FBCDMasterViewController.h */,
-				65BC966518F23E8D006063CA /* FBCDMasterViewController.m */,
-				65BC966718F23E8D006063CA /* FBCDDetailViewController.h */,
-				65BC966818F23E8D006063CA /* FBCDDetailViewController.m */,
 				65BC966A18F23E8E006063CA /* Images.xcassets */,
 				65BC966118F23E8D006063CA /* FailedBankCD.xcdatamodeld */,
+				65BC969418F24DA5006063CA /* FailedBankInfo.h */,
+				65BC969518F24DA5006063CA /* FailedBankInfo.m */,
+				65BC968E18F24C49006063CA /* FailedBankDetails.h */,
+				65BC968F18F24C49006063CA /* FailedBankDetails.m */,
 				65BC965318F23E8D006063CA /* Supporting Files */,
+				65BC968818F23F1F006063CA /* FBCDMasterViewController.h */,
+				65BC968918F23F1F006063CA /* FBCDMasterViewController.m */,
 			);
 			path = FailedBankCD;
 			sourceTree = "<group>";
@@ -265,10 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BC966318F23E8D006063CA /* FailedBankCD.xcdatamodeld in Sources */,
-				65BC966918F23E8D006063CA /* FBCDDetailViewController.m in Sources */,
+				65BC969018F24C49006063CA /* FailedBankDetails.m in Sources */,
 				65BC965918F23E8D006063CA /* main.m in Sources */,
 				65BC965D18F23E8D006063CA /* FBCDAppDelegate.m in Sources */,
-				65BC966618F23E8D006063CA /* FBCDMasterViewController.m in Sources */,
+				65BC969618F24DA5006063CA /* FailedBankInfo.m in Sources */,
+				65BC968A18F23F1F006063CA /* FBCDMasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

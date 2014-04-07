@@ -7,8 +7,9 @@
 //
 
 #import "FBCDAppDelegate.h"
-
 #import "FBCDMasterViewController.h"
+#import "FailedBankDetails.h"
+#import "FailedBankInfo.h"
 
 @implementation FBCDAppDelegate
 
@@ -19,9 +20,46 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //setting the managedObjectContext in the master view controller, needed for later on.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     FBCDMasterViewController *controller = (FBCDMasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    
+    //testing core data with hardcoded object inputs
+    NSManagedObjectContext *context = [self managedObjectContext];
+    //NSManagedObjectContext *context = _managedObjectContext;
+    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
+    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
+    [failedBankInfo setValue:@"TestVille" forKey:@"city"];
+    [failedBankInfo setValue:@"TestState" forKey:@"state"];
+    
+    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
+    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
+    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
+    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+    
+    //set the relationships too
+    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
+    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"ERROR in saving the entities: %@", [error localizedDescription]);
+    }
+    
+    //fetch objects from core data then log them to console
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:context];
+    [fetchRequest setEntity:entity];
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (FailedBankInfo *info in fetchedObjects) {
+        NSLog(@"Name: %@", [info valueForKey:@"name"]);
+        FailedBankDetails *details = [info valueForKey:@"details"];
+        NSLog(@"Zip: %@", [details valueForKey:@"zip"]);
+    }
+    
+    
     return YES;
 }
 							
