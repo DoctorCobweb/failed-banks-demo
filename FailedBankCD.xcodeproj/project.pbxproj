@@ -26,6 +26,7 @@
 		65BC968A18F23F1F006063CA /* FBCDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC968918F23F1F006063CA /* FBCDMasterViewController.m */; };
 		65BC969018F24C49006063CA /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC968F18F24C49006063CA /* FailedBankDetails.m */; };
 		65BC969618F24DA5006063CA /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BC969518F24DA5006063CA /* FailedBankInfo.m */; };
+		65BC96CB18F26B3A006063CA /* CoreDataTutorial2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 65BC96CA18F26B3A006063CA /* CoreDataTutorial2.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		65BC968F18F24C49006063CA /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDetails.m; sourceTree = "<group>"; };
 		65BC969418F24DA5006063CA /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
 		65BC969518F24DA5006063CA /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		65BC96CA18F26B3A006063CA /* CoreDataTutorial2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataTutorial2.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		65BC965218F23E8D006063CA /* FailedBankCD */ = {
 			isa = PBXGroup;
 			children = (
+				65BC96CA18F26B3A006063CA /* CoreDataTutorial2.sqlite */,
 				65BC965B18F23E8D006063CA /* FBCDAppDelegate.h */,
 				65BC965C18F23E8D006063CA /* FBCDAppDelegate.m */,
 				65BC965E18F23E8D006063CA /* Main.storyboard */,
@@ -249,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BC966B18F23E8E006063CA /* Images.xcassets in Resources */,
+				65BC96CB18F26B3A006063CA /* CoreDataTutorial2.sqlite in Resources */,
 				65BC965718F23E8D006063CA /* InfoPlist.strings in Resources */,
 				65BC966018F23E8D006063CA /* Main.storyboard in Resources */,
 			);
